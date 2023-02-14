@@ -1,14 +1,14 @@
-const FA = {name: "Faust",type: "Unique",value: 5};
-const MA = {name: "May",type: "Balance",value: 5};
-const HC = {name: "Happy Chaos",type: "Shooting",value: 9};
-const CH = {name: "Chipp Zanuff",type: "High Speed",value: 6};
-const BA = {name: "Baiken",type: "Balance",value: 3};
-const ZA = {name: "Zato=1",type: "Technical",value: 4};
-const RA = {name: "Ramlethal Valentine",type: "Shooting",value: 7};
-const NA = {name: "Nagoriyuki",type: "One-Shot",value: 6};
-const GD = {name: "Goldlewis Dickinson",type: "Power",value: 4};
-const IN = {name: "I-no",type: "Rush",value: 5};
-available = [FA, MA, HC, CH, BA, ZA, RA, NA, GD, IN,];
+const FA = {name: "Faust",              type: "Unique",     value: 5};
+const MA = {name: "May",                type: "Balance",    value: 5};
+const HC = {name: "Happy Chaos",        type: "Shooting",   value: 9};
+const CH = {name: "Chipp Zanuff",       type: "High Speed", value: 6};
+const BA = {name: "Baiken",             type: "Balance",    value: 3};
+const ZA = {name: "Zato=1",             type: "Technical",  value: 4};
+const RA = {name: "Ramlethal Valentine",type: "Shooting",   value: 7};
+const NA = {name: "Nagoriyuki",         type: "One-Shot",   value: 6};
+const GD = {name: "Goldlewis Dickinson",type: "Power",      value: 4};
+const IN = {name: "I-no",               type: "Rush",       value: 5};
+available = [FA, MA, HC, CH, BA, ZA, RA, NA, GD, IN];
 
 var fighter = document.getElementsByName('FighterSelect');
 
@@ -65,10 +65,12 @@ function getRandom(){
   var amt = available.length;
   var x = Math.random() * amt;
   var y = Math.floor(x);
-  document.getElementById("randy").innerHTML = y;
+  return y;
 
 }
 
 function getRandomCharacter(){
-
+  var num = getRandom();
+  var x = available[num].name;
+  document.getElementById("randy").innerHTML = x;
 }
