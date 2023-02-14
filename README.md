@@ -3,6 +3,6 @@ Already made a prototype version of the character select. I want to make it that
 <br>
 <br>
 <h1>Goals</h1>
-  -[] Set up the character select that can hold all of the Guilty Gear Strive characters.<br>
-  -[] Let a CPU pick a random fighter to face the user.<br>
-  -[] Give user results based on choices.<br>
+  -[ ] Set up the character select that can hold all of the Guilty Gear Strive characters.<br>
+  -[ ] Let a CPU pick a random fighter to face the user.<br>
+  -[ ] Give user results based on choices.<br>
