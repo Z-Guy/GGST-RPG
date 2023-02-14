@@ -22,17 +22,17 @@ function displayFighter(){
 }
 
 //Simulate a fight based on given fighter values
-/*function versus(){
+function versus(){
   var userName = getName(fighter);
   var userValue = getValue(userName);
-  var oppName = getName(opponent);
+  var oppName = getRandomCharacter();
   var oppValue = getValue(oppName);
 
-  if(getName(fighter) && getName(opponent)){
+  if(getName(fighter)){
     document.getElementById("result").innerHTML = userName+ " vs " + oppName;
     document.getElementById("result1").innerHTML = whosBetter(userValue, oppValue);
   } 
-}*/
+}
 
 //Determine who won the fight
 function whosBetter(a, b){
@@ -72,5 +72,5 @@ function getRandom(){
 function getRandomCharacter(){
   var num = getRandom();
   var x = available[num].name;
-  document.getElementById("randy").innerHTML = x;
+  return x;
 }
