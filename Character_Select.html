@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id = "Fighter">
+    <h1>Guilty Gear Strive</h1>
+
+    <h2>Choose your Fighter:</h2><br>
+    <div class="grid-container">
+        <div class="grid-item">
+            <input type="radio" id="FA" name="FighterSelect" class ="FighterInput" value="Faust" onclick="displayFighter()">
+            <label for="FA"><img src="Images\archive_faust.jpg" alt="Faust"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="MA" name="FighterSelect" class ="FighterInput" value="May" onclick="displayFighter()">
+            <label for="MA"><img src="Images\archive_may.jpg" alt="May"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="HC" name="FighterSelect" class ="FighterInput" value="Happy Chaos" onclick="displayFighter()">
+            <label for="HC"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="CH" name="FighterSelect" class ="FighterInput" value="Chipp Zanuff" onclick="displayFighter()">
+            <label for="CH"><img src="Images\archive_chp.jpg" alt="Chipp Zanuff"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="BA" name="FighterSelect" class ="FighterInput" value="Baiken" onclick="displayFighter()">
+            <label for="BA"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="ZA" name="FighterSelect" class ="FighterInput" value="Zato=1" onclick="displayFighter()">
+            <label for="ZA"><img src="Images\archive_zat.jpg" alt="Baiken"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="RA" name="FighterSelect" class ="FighterInput" value="Ramlethal Valentine" onclick="displayFighter()">
+            <label for="RA"><img src="Images\archive_ram-1.jpg" alt="Ramlethal"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="NA" name="FighterSelect" class ="FighterInput" value="Nagoriyuki" onclick="displayFighter()">
+            <label for="NA"><img src="Images\archive_nag.jpg" alt="Nagoriyuki"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="GD" name="FighterSelect" class ="FighterInput" value="Goldlewis Dickinson" onclick="displayFighter()">
+            <label for="GD"><img src="Images\archive_gold.jpg" alt="Goldlewis"></label>
+        </div>
+
+        <div class="grid-item">
+            <input type="radio" id="IN" name="FighterSelect" class ="FighterInput" value="I-no" onclick="displayFighter()">
+            <label for="IN"><img src="Images\archive_ino.jpg" alt="I-no"></label>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <div id="P1C"></div>
+    </div>
+
+    <button onclick="versus()" id = "versus">LET'S ROCK</button>
+
+    <div class="results">
+        <div id="result"></div>
+        <div id="result1"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>

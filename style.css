@@ -1,0 +1,90 @@
+*   {
+    padding: auto;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#Fighter    {
+    background-color: #ffffff;
+}
+
+#P1C {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button {
+    display: flex;
+    float: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #000000 ;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {background-color: #ffd700}
+
+button:active {
+    background-color: #ffd700;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: red;
+
+}
+
+.FighterInput{
+    position: absolute;
+    left: -9999px;
+}
+
+.results{
+    display: block;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 64px;;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type="radio"]:checked + label > img {
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 3px 3px rgb(0, 0, 0);
+}
+
+input[type="radio"] + label > img {
+    border: 1px rgb(0, 0, 0);
+    padding: 10px;
+
+    transition: 500ms all;
+}
