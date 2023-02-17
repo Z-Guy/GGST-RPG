@@ -1,14 +1,16 @@
-const FA = {name: "Faust",              type: "Unique",     value: 5};
-const MA = {name: "May",                type: "Balance",    value: 5};
-const HC = {name: "Happy Chaos",        type: "Shooting",   value: 9};
-const CH = {name: "Chipp Zanuff",       type: "High Speed", value: 6};
-const BA = {name: "Baiken",             type: "Balance",    value: 3};
-const ZA = {name: "Zato=1",             type: "Technical",  value: 4};
-const RA = {name: "Ramlethal Valentine",type: "Shooting",   value: 7};
-const NA = {name: "Nagoriyuki",         type: "One-Shot",   value: 6};
-const GD = {name: "Goldlewis Dickinson",type: "Power",      value: 4};
-const IN = {name: "I-no",               type: "Rush",       value: 5};
-available = [FA, MA, HC, CH, BA, ZA, RA, NA, GD, IN];
+const FA = {name: "Faust",              type: "Unique",     value: 5, pic:  "Images\\archive_faust.jpg"};
+const MA = {name: "May",                type: "Balance",    value: 5, pic:  "Images\\archive_may.jpg"};
+const HC = {name: "Happy Chaos",        type: "Shooting",   value: 9, pic:  "Images\\archive_happy_chaos.jpg"};
+const CH = {name: "Chipp Zanuff",       type: "High Speed", value: 6, pic:  "Images\\archive_chp.jpg"};
+const BA = {name: "Baiken",             type: "Balance",    value: 3, pic:  "Images\\archive_baiken.jpg"};
+const ZA = {name: "Zato=1",             type: "Technical",  value: 4, pic:  "Images\\archive_zat.jpg"};
+const RA = {name: "Ramlethal Valentine",type: "Shooting",   value: 7, pic:  "Images\\archive_ram-1.jpg"};
+const NA = {name: "Nagoriyuki",         type: "One-Shot",   value: 6, pic:  "Images\\archive_nag.jpg"};
+const GD = {name: "Goldlewis Dickinson",type: "Power",      value: 4, pic:  "Images\\archive_gold.jpg"};
+const IN = {name: "I-no",               type: "Rush",       value: 5, pic:  "Images\\archive_ino.jpg"};
+const TE = {name: "Testament",          type: "Balance",    value: 6, pic:  "Images\\icon-testament.jpg"};
+const SI = {name: "Sin Kiske",          type: "Rush",       value: 2, pic:  "Images\\icon-sin.jpg"};
+available = [FA, MA, HC, CH, BA, ZA, RA, NA, GD, IN, TE, SI];
 
 var fighter = document.getElementsByName('FighterSelect');
 
@@ -16,7 +18,7 @@ var fighter = document.getElementsByName('FighterSelect');
 function displayFighter(){
   for (var i = 0; i < fighter.length; i++) {
     if(fighter[i].checked){
-      document.getElementById("P1C").innerHTML = fighter[i].value;
+      document.getElementById("P1C").innerHTML = "You Choose:<br><span style='color: red'>" + fighter[i].value + "</span>";
     }
   }
 }
@@ -25,11 +27,14 @@ function displayFighter(){
 function versus(){
   var userName = getName(fighter);
   var userValue = getValue(userName);
+  var userPic = getPic(userName);
   var oppName = getRandomCharacter();
   var oppValue = getValue(oppName);
+  var oppPic = getPic(oppName);
+
 
   if(getName(fighter)){
-    document.getElementById("result").innerHTML = userName+ " vs " + oppName;
+    document.getElementById("result").innerHTML = "<br><span style='color: red'>" + userName+ "</span> vs <span style='color: blue'>" + oppName + "</span><br><br>";
     document.getElementById("result1").innerHTML = whosBetter(userValue, oppValue);
   } 
 }
@@ -61,6 +66,15 @@ function getValue(fightername){
   }
 }
 
+function getPic(name){
+  for (var j = 0; j < available.length; j++) {
+    if(name == available[j].name){
+      return available[j].pic;;
+    }
+  }
+}
+
+//RNG
 function getRandom(){
   var amt = available.length;
   var x = Math.random() * amt;
@@ -69,6 +83,7 @@ function getRandom(){
 
 }
 
+//RNG to get a random fighter
 function getRandomCharacter(){
   var num = getRandom();
   var x = available[num].name;
